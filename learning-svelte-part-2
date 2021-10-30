@@ -1,0 +1,52 @@
+#My Svelte Journey
+
+##Beginner to beginner introduction to Svelte part 2
+
+Hello friends, this is the second chapter of my series about Svelte, a new idea of framework.
+
+ This series of posts are not intended to teach anyone, they are basically a way for me to learn better the topic, so be free to roast me or help me where I make mistakes.
+
+ As the official documentation says: **“ Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens wwhen you build your app“**.
+ 
+I can’t really say my opinion to other frameworks, I am really new in this area, so I’ll take it to granted!
+
+In the last few days, I’ve been playing with it, and I can tell you that it’s really easy to grasp it and hold it and at the same time if you are new to frameworks, the syntax it’s easy to learn.
+
+For me the difficult part it’s, no it’s not difficult, let’s say unusual, it’s working with different components.
+
+I usually play with single app or a single page with a single style sheet and another for JavaScript, but I see the convenience and speed of working on small chunks of code and puzzle it together, I like it!
+
+**Remember that this is all new for me, using the JavaScript power in this way it’s vitalizing my knowledge about it.**
+
+
+
+
+
+Conditional rendering means the way we show or hide elements from the Dom, based on JavaScript conditions, that we write directly in the HTML.
+
+The syntax we need is:
+
+```
+{#if isActive} // we open the condition with "#"
+
+<h1> Your title goes here </h1> // HTML
+
+{/if}  // We close the condition with "/"
+```
+The full example:
+
+```
+<script>
+  Let isActive = true;
+</script>
+<main>
+{#if isActive}
+<h1> Show your title </h1>
+{/}
+```
+
+We render the h1 element into the dom if isActive property is true.
+
+With this if statment we can now combine another ``else````block or an ``else if````and so on.
+
+A very good place to play with Svelte is the REPL on the svelte official page, the follow link is related for the [Conditional Rendering](https://svelte.dev/repl/b023c56cdf0d42819fe7ccc38ea75c41?version=3.44.0)
