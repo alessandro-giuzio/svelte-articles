@@ -1,0 +1,98 @@
+## Welcome! 👋 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rwtumvon4uavpyqkdujs.jpg)
+## Beginner to beginner Introduction to Svelte
+
+
+
+The goal for this tutorial is to share my learning experience with Svelte, also this is my first post in this platform, so... be nice!
+
+In November 2020 i decided to change my career and start learn to code. First i was decided to prepare the exams for: 
+CCNA 200-301, but then i realize that i wanted to learn web development, so i started with the basics: HTML, CSS, JavaScript and so many tools that are needed for the job!
+
+After this first 11 months it's time for the JS frameworks!
+I decided to start with Svelte because i think it's gonna be implemented in vaste scale in the next years, and so many people are talking about it right now!
+
+One of this person is Mike from @htmleverything, probably you know him from the podcast: [HTML All The Things](https://www.htmlallthethings.com/podcast).
+Mike is very enthusiastic about Svelte, and I have to confess that I have chosen this framework following his words.
+
+This post it's mostly a follow up of Mike's course, so all the credits goes to him, for me this is just another way to keep learning by writing and "teaching" others.
+
+For my first post i will cover just the setup and first step, more weekly updates will follow my study.
+
+##Svelte it's simple to use and lets us create and build apps very fast.
+
+
+Svelte is not a library or a framework, it is a compiler.
+
+ This means that your code is not shipped in combination with packages to a browser, but it gets compiled to something else, this something is shipped to the browser. 
+  
+  Because all code gets compiled, the total size decreases, but the performance increases. 
+  
+  Besides, it allows you to break away from writing everything inside a JavaScript function, and have its optimized format.
+
+
+
+## The Setup step by step
+The only tool required it's [Node.js](Node.js) installed in your machine and your code editor of choiche
+
+
+> Setting up the project directory using [Vite](https://vitejs.dev/) 
+   `npm init vite@latest`
+   
+>   In the Svelte project: `npm install` and `npm run dev ` 
+> 
+   After that we will stop the server with control + c
+   
+>   Next thing installing [Tailwindcss](https://tailwindcss.com/) `npx svelte-add@latest  tailwindcss`
+   This will add some dependencies to our project folder
+   
+>   Again we will `npm -i` and after that `npm run dev` to restart the server
+> 
+>  Importing [DaisyUI](https://daisyui.com/) (component library) with: `npm i daisyui` and we will paste in the plugins of the tailwind.config.cjs file `require('daisyui'),` and save
+> 
+  
+
+Delete all the CSS, HTML and Scripts already present in the file and the folder: "lib".
+
+ That's it to set up the project, let's now dive in the components format and how to use it,
+
+
+## Components 
+
+
+**Svelte it's a single file components arquitecture.**
+
+###Script, Html , Style .
+```
+<script>
+ JavaScript goes here
+ </script>
+ 
+
+HTML  goes here
+
+
+<style>
+styles goes here
+</style>
+```
+
+ The `script` block contains the JavaScript that we are gonna use tu run a component instance.
+ 
+ All the variables declared (or imported) are visible and linkable to the markup section.
+ 
+ The code we write in the components it can be shared between multiple instances.
+ To made reactive statment (to access their value), we prefix with a: `$`
+ 
+```
+let count = 0
+$: doubled = count * 2;
+```
+
+Anytime the value of `count` change, the `doubled`value change as well, the dollar sign make recative the component.
+
+That's it for my first post about Svelte, and my first blog post ever.
+
+I will try to keep this as an opportunity to write constantly every week or so depending on my progress on this framework.
+
+Next week i will wrtite about: Conditional Rendering.
